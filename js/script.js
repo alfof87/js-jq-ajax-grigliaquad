@@ -6,15 +6,24 @@
 // Il numero ottenuto appare al centro
 // del quadrato
 
-  var btn = $("#btn");
+  var griglia = $(".griglia");
   function ajaxTest(){
-    $(document).on("click", btn, function(){
+    $(document).on("click", griglia, function(){
+      $.ajax({
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data, state){
           var success = data["success"];
-          
+          console.log(data);
+
+        },
+        error: function(request, state, error){
+          console.log("request", request);
+          console.log("state", state);
+          console.log("error", error);
         }
+      })
+
      });
     }
  //
