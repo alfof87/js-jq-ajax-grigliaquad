@@ -7,6 +7,8 @@
 // del quadrato
 
   var griglia = $(".griglia");
+  var x = $(this)griglia;
+
   function ajaxTest(){
     $(document).on("click", griglia, function(){
       $.ajax({
@@ -14,10 +16,10 @@
         method: "GET",
         success: function (data, state){
           var success = data["success"];
-          
+
           if (success <= 5) {
-            $(this).css(".yellow");
-            console.log(this);
+              $(this).css(".yellow");
+              console.log(this);
           }else{
             $(this).css(".green");
           }
