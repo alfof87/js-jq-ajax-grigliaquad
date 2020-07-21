@@ -13,7 +13,9 @@
   display: flex;
   justify-content: center;
 }
-button{
-  margin-left: 170vh;
-  margin-top: 40px;
+.yellow{
+  background-color: yellow;
+}
+.green{
+  background-color: green;
 }

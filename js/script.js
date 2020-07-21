@@ -14,7 +14,13 @@
         method: "GET",
         success: function (data, state){
           var success = data["success"];
-          console.log(data);
+          
+          if (success <= 5) {
+            $(this).css(".yellow");
+            console.log(this);
+          }else{
+            $(this).css(".green");
+          }
 
         },
         error: function(request, state, error){
