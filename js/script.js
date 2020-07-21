@@ -20,7 +20,7 @@
 
           if (success <= 5) {
             x.addClass("yellow");
-            
+            // success.append(x);
           }else{
             x.addClass("green");
 
