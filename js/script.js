@@ -6,23 +6,26 @@
 // Il numero ottenuto appare al centro
 // del quadrato
 
-  var griglia = $(".griglia");
-  var x = $(this)griglia;
+  var griglia = $(".quadrato");
+
 
   function ajaxTest(){
-    $(document).on("click", griglia, function(){
+    $(document).on("click", ".quadrato", function(){
+        var x = $(this);
       $.ajax({
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data, state){
-          var success = data["success"];
+          var success = data["response"];
 
           if (success <= 5) {
-              $(this).css(".yellow");
-              console.log(this);
+            x.addClass("yellow");
+            
           }else{
-            $(this).css(".green");
+            x.addClass("green");
+
           }
+          console.log(data);
 
         },
         error: function(request, state, error){
