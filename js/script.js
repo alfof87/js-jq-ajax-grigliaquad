@@ -8,17 +8,14 @@
 
   var btn = $("#btn");
   function ajaxTest(){
-    $(document).on("click", "#btn", function(){
-      $.ajax ({
+    $(document).on("click", btn, function(){
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
-        success: function(data, state){
+        success: function (data, state){
           var success = data["success"];
-          var value = data["response"];
-
-          console.log(data);
+          
         }
-      });
+     });
     }
  //
  //     var parola = prompt("inserisci una parola");
